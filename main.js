@@ -5,7 +5,7 @@ async function GetComponents() {
     .then((components) => {
       console.log(components);
       MyComponents = components;
-      LogComponents(components.UI_Component, "UI Component");
+      LogComponents(components.Backend_Component, "UI Component");
     });
 }
 
