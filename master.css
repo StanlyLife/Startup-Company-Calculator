@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  background: linear-gradient(
+    120deg,
+    rgba(255, 177, 66, 1),
+    rgba(253, 203, 110, 1)
+  );
+}
+
+main h1 {
+  color: #555;
+  text-transform: uppercase;
+  font: arial;
+  margin: 0 auto;
+  text-align: center;
+}

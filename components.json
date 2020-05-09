@@ -1,0 +1,22 @@
+{
+  "UI_Component": {
+    "requirements": [],
+    "role": "developer",
+    "time": 2
+  },
+  "Backend_Component": {
+    "requirements": [],
+    "role": "developer",
+    "time": 4
+  },
+  "Network_component": {
+    "requirements": [],
+    "role": "developer",
+    "time": 6
+  },
+  "Database_component": {
+    "requirements": [],
+    "role": "developer",
+    "time": 4
+  }
+}
