@@ -10,7 +10,7 @@ async function GetComponents() {
 }
 
 async function LogComponents(compontent, compontentName) {
-  console.log(`${compontentName}`);
+  console.log(`${compontentName} `);
   console.log(`Component role ${compontent.role}`);
   console.log(`Component time ${compontent.time}`);
   console.log(`Component requirements ${compontent.requirements}`);
