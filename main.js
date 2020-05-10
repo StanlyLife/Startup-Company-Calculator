@@ -6,7 +6,11 @@ async function getFeatures() {
     .then((x) => x.json())
     .then((requirements) => {
       MyFeatures = requirements;
-      CreateFeatureRequirements("Landing page");
+      CreateFeatureRequirements(requirements.Landing_Page, "Landing page");
+      CreateFeatureRequirements(
+        requirements.Video_Functionality,
+        "Video Functionality"
+      );
     });
 }
 
@@ -68,26 +72,42 @@ function GetFeatureRequirements() {
   });
 }
 
-function CreateFeatureRequirements(name) {
+function CreateFeatureRequirements(feature, name) {
   let featureDiv = document.createElement("div");
   featureDiv.classList.add("feature");
 
   let featureName = document.createElement("h1");
   featureName.innerText = name;
   featureDiv.appendChild(featureName);
-  MyFeatures.Landing_Page.forEach((component) => {
+
+  feature.forEach((component) => {
     let requiredComponent = document.createElement("div");
-    requiredComponent.classList.add("required-feature-component");
+    requiredComponent.classList.add("feature-required-component");
     let componentName = document.createElement("p");
     componentName.innerText = component.name;
 
     let componentAmount = document.createElement("p");
     componentAmount.innerText = component.amount;
 
+    let dash = document.createElement("p");
+    dash.innerText = ":";
+
     requiredComponent.appendChild(componentName);
+    requiredComponent.appendChild(dash);
     requiredComponent.appendChild(componentAmount);
 
     featureDiv.appendChild(requiredComponent);
+
+    /* Find components required component */
+    MyComponents[component.name].requirements.forEach((requiredComponent) => {
+      console.log(`${component.name} requires ${requiredComponent.name}`);
+      let ComponentsRequiredComponent = document.createElement("p");
+      ComponentsRequiredComponent.classList.add(
+        "components-required-component"
+      );
+      ComponentsRequiredComponent.innerText = `${component.name} requires ${requiredComponent.amount} ${requiredComponent.name}`;
+      featureDiv.appendChild(ComponentsRequiredComponent);
+    });
   });
 
   document.querySelector("main").appendChild(featureDiv);

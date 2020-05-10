@@ -16,5 +16,21 @@
       "name": "Graphics_Component",
       "amount": 1
     }
+  ],
+  "Video_Functionality": [
+    {
+      "name": "Frontend_Module",
+      "amount": 1
+    },
+    {
+      "name": "Video_Playback_Module",
+      "amount": 1
+    }
+  ],
+  "layout": [
+    {
+      "name": "UI_Component",
+      "amount": 1
+    }
   ]
 }

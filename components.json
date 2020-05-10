@@ -135,7 +135,7 @@
     "time": 15
   },
   "Frontend_Module": {
-    "name": "Backend_Module",
+    "name": "Frontend_Module",
     "requirements": [
       { "name": "Interface_Module", "amount": 1 },
       { "name": "UI_Element", "amount": 1 }
@@ -173,7 +173,7 @@
   "Content_Management_Module": {
     "name": "Content_Management_Module",
     "requirements": [
-      { "name": "Frontent_Module", "amount": 1 },
+      { "name": "Frontend_Module", "amount": 1 },
       { "name": "Backend_Module", "amount": 1 },
       { "name": "Input_Module", "amount": 1 }
     ],
