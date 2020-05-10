@@ -15,7 +15,37 @@ body {
 main h1 {
   color: #555;
   text-transform: uppercase;
-  font: arial;
+  font: Arial;
   margin: 0 auto;
   text-align: center;
+}
+
+.feature {
+  color: snow;
+  background-color: indianred;
+  width: 50%;
+  margin: 5vh auto;
+  padding: 3rem;
+  border-radius: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.feature h1 {
+  color: #333;
+}
+
+.required-feature-component {
+  display: flex;
+  justify-content: space-between;
+}
+
+.required-feature-component p {
+  flex: 1;
 }

@@ -1,0 +1,20 @@
+{
+  "Landing_Page": [
+    {
+      "name": "UI_Component",
+      "amount": 1
+    },
+    {
+      "name": "Backend_Component",
+      "amount": 1
+    },
+    {
+      "name": "Blueprint_Component",
+      "amount": 1
+    },
+    {
+      "name": "Graphics_Component",
+      "amount": 1
+    }
+  ]
+}

@@ -1,22 +1,137 @@
 {
   "UI_Component": {
+    "name": "UI_Component",
     "requirements": [],
     "role": "developer",
     "time": 2
   },
   "Backend_Component": {
+    "name": "Backend_Component",
     "requirements": [],
     "role": "developer",
     "time": 4
   },
-  "Network_component": {
+  "Network_Component": {
+    "name": "Network_Component",
     "requirements": [],
     "role": "developer",
     "time": 6
   },
-  "Database_component": {
+  "Video_Component": {
+    "name": "Video_Component",
     "requirements": [],
     "role": "developer",
+    "time": 14
+  },
+  "Semantic_Component": {
+    "name": "Semantic_Component",
+    "requirements": [],
+    "role": "developer",
+    "time": 3
+  },
+  "Encryption_Component": {
+    "name": "Encryption_Component",
+    "requirements": [],
+    "role": "developer",
+    "time": 8
+  },
+  "Filesystem_Component": {
+    "name": "Filesystem_Component",
+    "requirements": [],
+    "role": "developer",
+    "time": 4
+  },
+  "Smtp_Component": {
+    "name": "Smtp_Component",
+    "requirements": [],
+    "role": "developer",
+    "time": 8
+  },
+  "I18n_Component": {
+    "name": "I18n_Component",
+    "requirements": [],
+    "role": "developer",
+    "time": 4
+  },
+  "Search_Component": {
+    "name": "Database_Component",
+    "requirements": [],
+    "role": "developer",
+    "time": 12
+  },
+  "Comporession_Component": {
+    "name": "Compression_Component",
+    "requirements": [],
+    "role": "developer",
+    "time": 18
+  },
+  "Wireframe_Component": {
+    "name": "Wireframe_Component",
+    "requirements": [],
+    "role": "designer",
+    "time": 3
+  },
+  "Blueprint_Component": {
+    "name": "Blueprint_Component",
+    "requirements": [],
+    "role": "designer",
+    "time": 2
+  },
+  "Graphics_Component": {
+    "name": "Graphics_Component",
+    "requirements": [],
+    "role": "designer",
+    "time": 4
+  },
+  "UI_Element": {
+    "name": "UI_Element",
+    "requirements": [
+      { "name": "Blueprint_Component", "amount": 1 },
+      { "name": "Graphics_component", "amount": 1 }
+    ],
+    "role": "designer",
+    "time": 6
+  },
+  "UI_Set": {
+    "name": "UI_Set",
+    "requirements": [
+      { "name": "UI_Element", "amount": 2 },
+      { "name": "Wireframe_component", "amount": 2 }
+    ],
+    "role": "designer",
+    "time": 18
+  },
+  "Responsive_UI": {
+    "name": "Responsive_UI",
+    "requirements": [
+      { "name": "UI_Element", "amount": 2 },
+      { "name": "Wireframe_component", "amount": 2 }
+    ],
+    "role": "designer",
+    "time": 18
+  },
+  "Documentation_Component": {
+    "name": "Documentation_Component",
+    "requirements": [],
+    "role": "designer",
+    "time": 12
+  },
+  "Design_Guidelines": {
+    "name": "Design_Guidelines",
+    "requirements": [
+      { "name": "Documentation_Component", "amount": 3 },
+      { "name": "Responsive_UI", "amount": 3 }
+    ],
+    "role": "designer",
+    "time": 2
+  },
+  "Backend_Module": {
+    "name": "Backend_Module",
+    "requirements": [
+      { "name": "Backend_Component", "amount": 1 },
+      { "name": "Network_component", "amount": 1 }
+    ],
+    "role": "Lead_Developer",
     "time": 4
   }
 }
