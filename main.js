@@ -6,6 +6,11 @@ async function getFeatures() {
     .then((x) => x.json())
     .then((requirements) => {
       MyFeatures = requirements;
+      CreateFeatureRequirements(
+        requirements.Sharing_Functionality,
+        "Sharing_Functionality"
+      );
+      CreateFeatureRequirements(requirements.Live_Streaming, "Live Streaming");
       CreateFeatureRequirements(requirements.Landing_Page, "Landing page");
       CreateFeatureRequirements(
         requirements.Video_Functionality,
@@ -105,7 +110,9 @@ function CreateFeatureRequirements(feature, name) {
       ComponentsRequiredComponent.classList.add(
         "components-required-component"
       );
-      ComponentsRequiredComponent.innerText = `${component.name} requires ${requiredComponent.amount} ${requiredComponent.name}`;
+      ComponentsRequiredComponent.innerText = `${component.name} requires ${
+        requiredComponent.amount * component.amount
+      } ${requiredComponent.name}`;
       featureDiv.appendChild(ComponentsRequiredComponent);
     });
   });
