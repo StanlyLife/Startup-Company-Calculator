@@ -125,11 +125,174 @@
     "role": "designer",
     "time": 2
   },
+  "Interface_Module": {
+    "name": "Interface_Module",
+    "requirements": [
+      { "name": "UI_Element", "amount": 2 },
+      { "name": "Wireframe_component", "amount": 1 }
+    ],
+    "role": "Lead_Developer",
+    "time": 15
+  },
+  "Frontend_Module": {
+    "name": "Backend_Module",
+    "requirements": [
+      { "name": "Interface_Module", "amount": 1 },
+      { "name": "UI_Element", "amount": 1 }
+    ],
+    "role": "Lead_Developer",
+    "time": 21
+  },
   "Backend_Module": {
     "name": "Backend_Module",
     "requirements": [
       { "name": "Backend_Component", "amount": 1 },
       { "name": "Network_component", "amount": 1 }
+    ],
+    "role": "Lead_Developer",
+    "time": 10
+  },
+  "Input_Module": {
+    "name": "Backend_Module",
+    "requirements": [
+      { "name": "UI_Component", "amount": 1 },
+      { "name": "Backend_component", "amount": 1 }
+    ],
+    "role": "Lead_Developer",
+    "time": 4
+  },
+  "Storage_Module": {
+    "name": "Storage_Module",
+    "requirements": [
+      { "name": "Filesystem_Component", "amount": 1 },
+      { "name": "Backend_component", "amount": 1 }
+    ],
+    "role": "Lead_Developer",
+    "time": 4
+  },
+  "Content_Management_Module": {
+    "name": "Content_Management_Module",
+    "requirements": [
+      { "name": "Frontent_Module", "amount": 1 },
+      { "name": "Backend_Module", "amount": 1 },
+      { "name": "Input_Module", "amount": 1 }
+    ],
+    "role": "Lead_Developer",
+    "time": 4
+  },
+  "Video_Playback_Module": {
+    "name": "Video_Playback_Module",
+    "requirements": [
+      { "name": "Video_Component", "amount": 1 },
+      { "name": "Backend_Module", "amount": 1 },
+      { "name": "Frontend_Module", "amount": 1 }
+    ],
+    "role": "Lead_Developer",
+    "time": 4
+  },
+  "Seo_Module": {
+    "name": "Seo_Module",
+    "requirements": [
+      { "name": "Frontent_Module", "amount": 1 },
+      { "name": "Network_component", "amount": 1 }
+    ],
+    "role": "Lead_Developer",
+    "time": 4
+  },
+  "Authentication_Module": {
+    "name": "Authentication_Module",
+    "requirements": [
+      { "name": "Database_Component", "amount": 1 },
+      { "name": "Backend_Module", "amount": 1 },
+      { "name": "Encryption_component", "amount": 1 }
+    ],
+    "role": "Lead_Developer",
+    "time": 4
+  },
+  "Email_Module": {
+    "name": "Email_Module",
+    "requirements": [
+      { "name": "Smtp_Component", "amount": 1 },
+      { "name": "Backend_component", "amount": 1 }
+    ],
+    "role": "Lead_Developer",
+    "time": 4
+  },
+  "Database_Layer": {
+    "name": "Database_Layer",
+    "requirements": [
+      { "name": "Database_Component", "amount": 1 },
+      { "name": "Backend_Component", "amount": 1 },
+      { "name": "Network_component", "amount": 1 }
+    ],
+    "role": "Lead_Developer",
+    "time": 4
+  },
+  "Notification_Module": {
+    "name": "Notification_Module",
+    "requirements": [
+      { "name": "Email_Module", "amount": 1 },
+      { "name": "UI_Component", "amount": 1 },
+      { "name": "Backend_component", "amount": 1 }
+    ],
+    "role": "Lead_Developer",
+    "time": 4
+  },
+  "Payment_Gateway_Module": {
+    "name": "Payment_Gateway_Module",
+    "requirements": [
+      { "name": "Authentication_Module", "amount": 1 },
+      { "name": "API_Client_Module", "amount": 1 },
+      { "name": "Database_Layer", "amount": 1 }
+    ],
+    "role": "Lead_Developer",
+    "time": 4
+  },
+  "Localization_Module": {
+    "name": "Localization_Module",
+    "requirements": [
+      { "name": "I18n_Component", "amount": 1 },
+      { "name": "Frontend_Module", "amount": 1 }
+    ],
+    "role": "Lead_Developer",
+    "time": 4
+  },
+  "Search_Module": {
+    "name": "Search_Module",
+    "requirements": [
+      { "name": "Backend_Component", "amount": 1 },
+      { "name": "Database_Component", "amount": 1 },
+      { "name": "Search_Algorithm_component", "amount": 1 }
+    ],
+    "role": "Lead_Developer",
+    "time": 4
+  },
+  "Bandwidth_Comporession_Module": {
+    "name": "Bandwidth_Comporession_Module",
+    "requirements": [
+      { "name": "Compression_Component", "amount": 1 },
+      { "name": "Backend_Component", "amount": 1 },
+      { "name": "Network_component", "amount": 1 }
+    ],
+    "role": "Lead_Developer",
+    "time": 4
+  },
+  "API_Client_Module": {
+    "name": "API_Client_Module",
+    "requirements": [
+      { "name": "Database_Layer", "amount": 1 },
+      { "name": "Backend_Module", "amount": 1 },
+      { "name": "Compression_Component", "amount": 2 }
+    ],
+    "role": "Lead_Developer",
+    "time": 4
+  },
+  "Code_Optimization_Module": {
+    "name": "Code_Optimization_Module",
+    "requirements": [
+      { "name": "Database_Layer", "amount": 2 },
+      { "name": "Backend_Module", "amount": 2 },
+      { "name": "Frontend_Module", "amount": 2 }
     ],
     "role": "Lead_Developer",
     "time": 4
