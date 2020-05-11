@@ -8,9 +8,14 @@ async function getFeatures() {
       MyFeatures = requirements;
       // CreateFeatureRequirements(requirements.Sharing_Functionality, "Sf");
       // CreateFeatureRequirements(requirements.Chat_System, "Chat System");
-      CreateFeatureRequirements(requirements.Live_Streaming, "Live Streaming");
+      // CreateFeatureRequirements(requirements.Live_Streaming, "Live Streaming");
+      CreateFeatureRequirements(
+        requirements.Video_Functionality,
+        "Video Functionality"
+      );
       CreateFeatureRequirements(requirements.Landing_Page, "Landing page");
-      CreateFeatureRequirements(requirements.Video_Functionality, "Video F");
+      CreateFeatureRequirements(requirements.Help_System, "Help system");
+      CreateFeatureRequirements(requirements.AD_Block_Obfuscator, "Adblocker");
     });
 }
 
@@ -66,7 +71,14 @@ let requirementsAmount = [];
 function ComponentRequirements(_component, amount) {
   /* parse from feature.component to components.component */
   component = MyComponents[_component.name];
+  try {
+    console.log(`trying to push ${component.name}`);
+  } catch (error) {
+    console.log(`Could not create variable ${_component.name}`);
+  }
   for (var i = 0; i < amount; i++) {
+    console.log(`push ${component.name}`);
+
     requirementsList.push(component.name);
   }
   /* Check if component has requirements */
@@ -78,8 +90,6 @@ function ComponentRequirements(_component, amount) {
         ComponentRequirements(requirement, requirement.amount);
       }
     });
-  } else {
-    console.log(`${component.name} has no requirements`);
   }
 }
 
@@ -93,14 +103,11 @@ let counts = {};
 function CreateFeatureRequirements(feature, name) {
   requirementsList = [];
   feature.forEach((Requirements) => {
-    requirementsAmount = [];
     for (let i = 0; i < Requirements.amount; i++) {
-      requirementsList.push(Requirements.name);
+      console.log(`${name} Main comp: ${Requirements.name} @@@@`);
+      // requirementsList.push(Requirements.name);
+      ComponentRequirements(MyComponents[Requirements.name], 1);
     }
-    ComponentRequirements(
-      MyComponents[Requirements.name],
-      MyComponents[Requirements.name].amount
-    );
     requirementsList.sort();
 
     /* */
@@ -110,7 +117,6 @@ function CreateFeatureRequirements(feature, name) {
   requirementsList.forEach(function (x) {
     counts[x] = (counts[x] || 0) + 1;
   });
-  console.log(counts);
   CreateFeatureHtml(name);
 }
 
@@ -136,7 +142,14 @@ function CreateFeatureHtml(name) {
     }
     propValue = counts[propName];
     let component = document.createElement("p");
-    component.innerText = `${propValue} : ${propName}`;
+    let componentAmount = document.createElement("p");
+    componentAmount.classList.add("amount");
+
+    let newpropName = String(propName).replace(/_/g, " ");
+
+    componentAmount.innerText = `${propValue}`;
+    component.innerText = `${newpropName}`;
+    componentWrapper.appendChild(componentAmount);
     componentWrapper.appendChild(component);
     componentContainer.appendChild(componentWrapper);
   }
