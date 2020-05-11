@@ -20,6 +20,13 @@
     "time": 6,
     "url": "./assets/components/Network.png"
   },
+  "Database_Component": {
+    "name": "Database_Component",
+    "requirements": [],
+    "role": "developer",
+    "time": 4,
+    "url": "./assets/components/database.png"
+  },
   "Video_Component": {
     "name": "Video_Component",
     "requirements": [],
@@ -69,7 +76,7 @@
     "time": 12,
     "url": "./assets/components/searchalgorithm.png"
   },
-  "Comporession_Component": {
+  "Compression_Component": {
     "name": "Compression_Component",
     "requirements": [],
     "role": "developer",
@@ -175,7 +182,7 @@
     "url": "./assets/modules/backend.png"
   },
   "Input_Module": {
-    "name": "Backend_Module",
+    "name": "Input_Module",
     "requirements": [
       { "name": "UI_Component", "amount": 1 },
       { "name": "Backend_Component", "amount": 1 }
@@ -333,5 +340,87 @@
     "role": "Lead_Developer",
     "time": 4,
     "url": "./assets/modules/codeoptimization.png"
+  },
+  "Research_Point": {
+    "name": "Research_Point",
+    "requirements": [],
+    "role": "Researcher",
+    "time": 1,
+    "url": "./assets/components/researchpoint.png"
+  },
+  "Viritual_Hardware": {
+    "name": "Viritual_Hardware",
+    "requirements": [],
+    "role": "Sysadmin",
+    "time": 4,
+    "url": "./assets/components/researchpoint.png"
+  },
+  "Operating_System": {
+    "name": "Operating_System",
+    "requirements": [],
+    "role": "Sysadmin",
+    "time": 4,
+    "url": "./assets/components/researchpoint.png"
+  },
+  "Firewall": {
+    "name": "Firewall",
+    "requirements": [],
+    "role": "Sysadmin",
+    "time": 4,
+    "url": "./assets/components/researchpoint.png"
+  },
+  "Process_Management": {
+    "name": "Process_Management",
+    "requirements": [],
+    "role": "Sysadmin",
+    "time": 6,
+    "url": "./assets/components/researchpoint.png"
+  },
+  "Continous_Integration": {
+    "name": "Continous_Integration",
+    "requirements": [],
+    "role": "Sysadmin",
+    "time": 8,
+    "url": "./assets/components/researchpoint.png"
+  },
+  "Cron_Job": {
+    "name": "Cron_Job",
+    "requirements": [],
+    "role": "Sysadmin",
+    "time": 3,
+    "url": "./assets/components/researchpoint.png"
+  },
+  "Virtual_Container": {
+    "name": "Virtual_Container",
+    "requirements": [
+      { "name": "Virtual_Hardware", "amount": 1 },
+      { "name": "Operating_System", "amount": 1 },
+      { "name": "Continous_Inegration", "amount": 1 },
+      { "name": "Cron_Job", "amount": 1 },
+      { "name": "Process_Management", "amount": 1 }
+    ],
+    "role": "Sysadmin",
+    "time": 25,
+    "url": "./assets/components/researchpoint.png"
+  },
+  "Cluster": {
+    "name": "Cluster",
+    "requirements": [
+      { "name": "Virtual_Container", "amount": 3 },
+      { "name": "Firewall", "amount": 10 }
+    ],
+    "role": "Sysadmin",
+    "time": 115,
+    "url": "./assets/components/researchpoint.png"
+  },
+  "Swarm_Management": {
+    "name": "Swarm_Management",
+    "requirements": [
+      { "name": "Cluster", "amount": 1 },
+      { "name": "Virtual_Container", "amount": 1 }
+    ],
+    "role": "Sysadmin",
+    "time": 140,
+    "url": "./assets/components/researchpoint.png"
   }
 }
