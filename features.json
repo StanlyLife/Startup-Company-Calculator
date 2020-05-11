@@ -27,6 +27,28 @@
       "amount": 1
     }
   ],
+  "Video_Editor": [
+    {
+      "name": "Storage_Module",
+      "amount": 1
+    },
+    {
+      "name": "Frontend_Module",
+      "amount": 1
+    },
+    {
+      "name": "Backend_Module",
+      "amount": 1
+    },
+    {
+      "name": "UI_Set",
+      "amount": 1
+    },
+    {
+      "name": "Video_Playback_Module",
+      "amount": 1
+    }
+  ],
   "Live_Streaming": [
     {
       "name": "Backend_Module",
@@ -111,10 +133,88 @@
       "amount": 1
     }
   ],
-  "layout": [
+  "Help_System": [
     {
-      "name": "UI_Module",
+      "name": "Content_Management_Module",
+      "amount": 4
+    },
+    {
+      "name": "Input_Module",
+      "amount": 4
+    },
+    {
+      "name": "Frontend_Module",
+      "amount": 3
+    },
+    {
+      "name": "Backend_Module",
+      "amount": 3
+    },
+    {
+      "name": "UI_Set",
+      "amount": 2
+    }
+  ],
+  "Payment_System": [
+    {
+      "name": "Database_Layer",
+      "amount": 2
+    },
+    {
+      "name": "Frontend_Module",
       "amount": 1
+    },
+    {
+      "name": "Payment_Gateway_Module",
+      "amount": 1
+    },
+    {
+      "name": "Email_Module",
+      "amount": 1
+    },
+    {
+      "name": "Design_Guidelines",
+      "amount": 1
+    }
+  ],
+  "Ddos_Protection": [
+    {
+      "name": "Code_Optimization_Module",
+      "amount": 1
+    },
+    {
+      "name": "Firewall",
+      "amount": 5
+    },
+    {
+      "name": "Swarm_Management",
+      "amount": 1
+    },
+    {
+      "name": "Research_Point",
+      "amount": 200
+    },
+    {
+      "name": "API_Client_Module",
+      "amount": 2
+    }
+  ],
+  "AD_Block_Obfuscator": [
+    {
+      "name": "Code_Optimization_Module",
+      "amount": 2
+    },
+    {
+      "name": "UI_Set",
+      "amount": 4
+    },
+    {
+      "name": "Research_Point",
+      "amount": 200
+    },
+    {
+      "name": "API_Client_Module",
+      "amount": 2
     }
   ]
 }
