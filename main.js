@@ -8,7 +8,7 @@ async function getFeatures() {
       MyFeatures = requirements;
       // CreateFeatureRequirements(requirements.Sharing_Functionality, "Sf");
       // CreateFeatureRequirements(requirements.Chat_System, "Chat System");
-      // CreateFeatureRequirements(requirements.Live_Streaming, "Live Streaming");
+      CreateFeatureRequirements(requirements.Live_Streaming, "Live Streaming");
       CreateFeatureRequirements(requirements.Landing_Page, "Landing page");
       CreateFeatureRequirements(requirements.Video_Functionality, "Video F");
     });
@@ -94,7 +94,9 @@ function CreateFeatureRequirements(feature, name) {
   requirementsList = [];
   feature.forEach((Requirements) => {
     requirementsAmount = [];
-    requirementsList.push(Requirements.name);
+    for (let i = 0; i < Requirements.amount; i++) {
+      requirementsList.push(Requirements.name);
+    }
     ComponentRequirements(
       MyComponents[Requirements.name],
       MyComponents[Requirements.name].amount
@@ -121,18 +123,22 @@ function CreateFeatureHtml(name) {
   featureContainer.appendChild(featureHeader);
 
   const componentContainer = document.createElement("div");
-  // counts.forEach((com) => {
-  //   let component = document.createElement("p");
-  //   component.innerText = `component ${com}`;
-  //   componentContainer.appendChild(component);
-  // });
 
   var propValue;
   for (var propName in counts) {
+    let componentWrapper = document.createElement("div");
+    componentWrapper.classList.add("component-wrapper");
+    /* add image */
+    if (MyComponents[propName].url != undefined) {
+      let componentImage = document.createElement("img");
+      componentImage.src = `${MyComponents[propName].url}`;
+      componentWrapper.appendChild(componentImage);
+    }
     propValue = counts[propName];
     let component = document.createElement("p");
     component.innerText = `${propValue} : ${propName}`;
-    componentContainer.appendChild(component);
+    componentWrapper.appendChild(component);
+    componentContainer.appendChild(componentWrapper);
   }
 
   featureContainer.appendChild(componentContainer);

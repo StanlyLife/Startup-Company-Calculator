@@ -44,26 +44,18 @@ main h1 {
   color: #333;
 }
 
-.feature-required-component {
+.component-wrapper {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  padding-top: 1rem;
+  align-items: center;
+  padding: 0.25rem;
 }
 
-.feature-required-component p {
-  flex: 1;
-  padding: 0 0.25rem;
+.component-wrapper p {
+  text-align: right;
 }
 
-.components-required-component {
-  font-size: 1.25rem;
-  color: #333;
-}
-
-.sub-sub-requirements {
-  background-color: lawngreen;
-  color: #333;
-  padding: 1rem;
-  border-radius: 3rem;
-  margin: 1rem;
+.component-wrapper img {
+  width: 10%;
 }

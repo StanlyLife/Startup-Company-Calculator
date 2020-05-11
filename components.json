@@ -3,85 +3,99 @@
     "name": "UI_Component",
     "requirements": [],
     "role": "developer",
-    "time": 2
+    "time": 2,
+    "url": "./assets/components/ui.png"
   },
   "Backend_Component": {
     "name": "Backend_Component",
     "requirements": [],
     "role": "developer",
-    "time": 4
+    "time": 4,
+    "url": "./assets/components/backend.png"
   },
   "Network_Component": {
     "name": "Network_Component",
     "requirements": [],
     "role": "developer",
-    "time": 6
+    "time": 6,
+    "url": "./assets/components/Network.png"
   },
   "Video_Component": {
     "name": "Video_Component",
     "requirements": [],
     "role": "developer",
-    "time": 14
+    "time": 14,
+    "url": "./assets/components/video.png"
   },
   "Semantic_Component": {
     "name": "Semantic_Component",
     "requirements": [],
     "role": "developer",
-    "time": 3
+    "time": 3,
+    "url": "./assets/components/semantic.png"
   },
   "Encryption_Component": {
     "name": "Encryption_Component",
     "requirements": [],
     "role": "developer",
-    "time": 8
+    "time": 8,
+    "url": "./assets/components/Encryption.png"
   },
   "Filesystem_Component": {
     "name": "Filesystem_Component",
     "requirements": [],
     "role": "developer",
-    "time": 4
+    "time": 4,
+    "url": "./assets/components/filesystem.png"
   },
   "Smtp_Component": {
     "name": "Smtp_Component",
     "requirements": [],
     "role": "developer",
-    "time": 8
+    "time": 8,
+    "url": "./assets/components/smtp.png"
   },
   "I18n_Component": {
     "name": "I18n_Component",
     "requirements": [],
     "role": "developer",
-    "time": 4
+    "time": 4,
+    "url": "./assets/components/i18n.png"
   },
-  "Search_Component": {
-    "name": "Database_Component",
+  "Search_Algorithm_Component": {
+    "name": "Search_Algorithm_Component",
     "requirements": [],
     "role": "developer",
-    "time": 12
+    "time": 12,
+    "url": "./assets/components/searchalgorithm.png"
   },
   "Comporession_Component": {
     "name": "Compression_Component",
     "requirements": [],
     "role": "developer",
-    "time": 18
+    "time": 18,
+    "url": "./assets/components/compression.png"
   },
   "Wireframe_Component": {
     "name": "Wireframe_Component",
     "requirements": [],
     "role": "designer",
-    "time": 3
+    "time": 3,
+    "url": "./assets/components/Wireframe.png"
   },
   "Blueprint_Component": {
     "name": "Blueprint_Component",
     "requirements": [],
     "role": "designer",
-    "time": 2
+    "time": 2,
+    "url": "./assets/components/Blueprint.png"
   },
   "Graphics_Component": {
     "name": "Graphics_Component",
     "requirements": [],
     "role": "designer",
-    "time": 4
+    "time": 4,
+    "url": "./assets/components/Graphics.png"
   },
   "UI_Element": {
     "name": "UI_Element",
@@ -90,7 +104,8 @@
       { "name": "Graphics_Component", "amount": 1 }
     ],
     "role": "designer",
-    "time": 6
+    "time": 6,
+    "url": "./assets/modules/UIelement.png"
   },
   "UI_Set": {
     "name": "UI_Set",
@@ -99,7 +114,8 @@
       { "name": "Wireframe_Component", "amount": 2 }
     ],
     "role": "designer",
-    "time": 18
+    "time": 18,
+    "url": "./assets/modules/uiset.png"
   },
   "Responsive_UI": {
     "name": "Responsive_UI",
@@ -108,13 +124,15 @@
       { "name": "Wireframe_Component", "amount": 2 }
     ],
     "role": "designer",
-    "time": 18
+    "time": 18,
+    "url": "./assets/modules/responsiveui.png"
   },
   "Documentation_Component": {
     "name": "Documentation_Component",
     "requirements": [],
     "role": "designer",
-    "time": 12
+    "time": 12,
+    "url": "./assets/components/documentation.png"
   },
   "Design_Guidelines": {
     "name": "Design_Guidelines",
@@ -123,7 +141,8 @@
       { "name": "Responsive_UI", "amount": 3 }
     ],
     "role": "designer",
-    "time": 2
+    "time": 2,
+    "url": "./assets/modules/DesignGuidelines.png"
   },
   "Interface_Module": {
     "name": "Interface_Module",
@@ -132,7 +151,8 @@
       { "name": "Wireframe_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 15
+    "time": 15,
+    "url": "./assets/modules/webdesign.png"
   },
   "Frontend_Module": {
     "name": "Frontend_Module",
@@ -141,7 +161,8 @@
       { "name": "UI_Element", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 21
+    "time": 21,
+    "url": "./assets/modules/frontend.png"
   },
   "Backend_Module": {
     "name": "Backend_Module",
@@ -150,7 +171,8 @@
       { "name": "Network_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 10
+    "time": 10,
+    "url": "./assets/modules/backend.png"
   },
   "Input_Module": {
     "name": "Backend_Module",
@@ -159,7 +181,8 @@
       { "name": "Backend_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4
+    "time": 4,
+    "url": "./assets/modules/input.png"
   },
   "Storage_Module": {
     "name": "Storage_Module",
@@ -168,7 +191,8 @@
       { "name": "Backend_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4
+    "time": 4,
+    "url": "./assets/modules/storage.png"
   },
   "Content_Management_Module": {
     "name": "Content_Management_Module",
@@ -178,7 +202,8 @@
       { "name": "Input_Module", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4
+    "time": 4,
+    "url": "./assets/modules/contentmanagement.png"
   },
   "Video_Playback_Module": {
     "name": "Video_Playback_Module",
@@ -188,16 +213,18 @@
       { "name": "Frontend_Module", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4
+    "time": 4,
+    "url": "./assets/modules/video.png"
   },
-  "Seo_Module": {
-    "name": "Seo_Module",
+  "SEO_Module": {
+    "name": "SEO_Module",
     "requirements": [
       { "name": "Frontent_Module", "amount": 1 },
       { "name": "Network_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4
+    "time": 4,
+    "url": "./assets/modules/seo.png"
   },
   "Authentication_Module": {
     "name": "Authentication_Module",
@@ -207,7 +234,8 @@
       { "name": "Encryption_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4
+    "time": 4,
+    "url": "./assets/modules/Authentication.png"
   },
   "Email_Module": {
     "name": "Email_Module",
@@ -216,7 +244,8 @@
       { "name": "Backend_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4
+    "time": 4,
+    "url": "./assets/modules/Email.png"
   },
   "Database_Layer": {
     "name": "Database_Layer",
@@ -226,7 +255,8 @@
       { "name": "Network_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4
+    "time": 4,
+    "url": "./assets/modules/datalayer.png"
   },
   "Notification_Module": {
     "name": "Notification_Module",
@@ -236,7 +266,8 @@
       { "name": "Backend_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4
+    "time": 4,
+    "url": "./assets/modules/notification.png"
   },
   "Payment_Gateway_Module": {
     "name": "Payment_Gateway_Module",
@@ -246,7 +277,8 @@
       { "name": "Database_Layer", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4
+    "time": 4,
+    "url": "./assets/modules/payment.png"
   },
   "Localization_Module": {
     "name": "Localization_Module",
@@ -255,7 +287,8 @@
       { "name": "Frontend_Module", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4
+    "time": 4,
+    "url": "./assets/modules/localization.png"
   },
   "Search_Module": {
     "name": "Search_Module",
@@ -265,7 +298,8 @@
       { "name": "Search_Algorithm_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4
+    "time": 4,
+    "url": "./assets/modules/search.png"
   },
   "Bandwidth_Comporession_Module": {
     "name": "Bandwidth_Comporession_Module",
@@ -275,7 +309,8 @@
       { "name": "Network_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4
+    "time": 4,
+    "url": "./assets/modules/compression.png"
   },
   "API_Client_Module": {
     "name": "API_Client_Module",
@@ -285,7 +320,8 @@
       { "name": "Compression_Component", "amount": 2 }
     ],
     "role": "Lead_Developer",
-    "time": 4
+    "time": 4,
+    "url": "./assets/modules/apiclient.png"
   },
   "Code_Optimization_Module": {
     "name": "Code_Optimization_Module",
@@ -295,6 +331,7 @@
       { "name": "Frontend_Module", "amount": 2 }
     ],
     "role": "Lead_Developer",
-    "time": 4
+    "time": 4,
+    "url": "./assets/modules/codeoptimization.png"
   }
 }
