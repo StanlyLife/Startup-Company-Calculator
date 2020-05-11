@@ -6,16 +6,11 @@ async function getFeatures() {
     .then((x) => x.json())
     .then((requirements) => {
       MyFeatures = requirements;
-      CreateFeatureRequirements(
-        requirements.Sharing_Functionality,
-        "Sharing_Functionality"
-      );
-      CreateFeatureRequirements(requirements.Live_Streaming, "Live Streaming");
+      // CreateFeatureRequirements(requirements.Sharing_Functionality, "Sf");
+      // CreateFeatureRequirements(requirements.Chat_System, "Chat System");
+      // CreateFeatureRequirements(requirements.Live_Streaming, "Live Streaming");
       CreateFeatureRequirements(requirements.Landing_Page, "Landing page");
-      CreateFeatureRequirements(
-        requirements.Video_Functionality,
-        "Video Functionality"
-      );
+      CreateFeatureRequirements(requirements.Video_Functionality, "Video F");
     });
 }
 
@@ -23,7 +18,6 @@ async function GetComponents() {
   await fetch("components.json")
     .then((x) => x.json())
     .then((components) => {
-      console.log(components);
       MyComponents = components;
       LogComponents(components.Backend_Component, "UI Component");
       CreateElement(components.Backend_Module);
@@ -31,12 +25,7 @@ async function GetComponents() {
     });
 }
 
-async function LogComponents(compontent, compontentName) {
-  console.log(`${compontentName} `);
-  console.log(`Component role ${compontent.role}`);
-  console.log(`Component time ${compontent.time}`);
-  console.log(`Component requirements ${compontent.requirements}`);
-}
+async function LogComponents(compontent, compontentName) {}
 
 function CreateElement(component) {
   let container = document.createElement("div");
@@ -49,7 +38,6 @@ function CreateElement(component) {
   container.appendChild(MainComponent);
 
   component.requirements.forEach((element) => {
-    console.log(`added ${element.name}`);
     let RequiredComponent = document.createElement("div");
     RequiredComponent.innerText = `Required: ${element.amount} : ${element.name}`;
     container.appendChild(RequiredComponent);
@@ -63,18 +51,13 @@ function GetRequirements(component) {
   component.requirements.forEach((r) => {
     for (let i = 0; i < r.amount; i++) {
       list.push(r.name);
-      console.log(r.name);
     }
   });
   return list;
 }
 
 function GetFeatureRequirements() {
-  MyFeatures.Landing_Page.forEach((component) => {
-    console.log(
-      `Landing page component: ${component.amount}: ${component.name}`
-    );
-  });
+  MyFeatures.Landing_Page.forEach((component) => {});
 }
 
 function CreateFeatureRequirements(feature, name) {
@@ -105,15 +88,45 @@ function CreateFeatureRequirements(feature, name) {
 
     /* Find components required component */
     MyComponents[component.name].requirements.forEach((requiredComponent) => {
-      console.log(`${component.name} requires ${requiredComponent.name}`);
       let ComponentsRequiredComponent = document.createElement("p");
-      ComponentsRequiredComponent.classList.add(
-        "components-required-component"
-      );
+      ComponentsRequiredComponent.classList.add("sub-component");
       ComponentsRequiredComponent.innerText = `${component.name} requires ${
         requiredComponent.amount * component.amount
       } ${requiredComponent.name}`;
       featureDiv.appendChild(ComponentsRequiredComponent);
+
+      /*Required-Feature-Component's required component, required component */
+
+      MyComponents[requiredComponent.name].requirements.forEach((rc) => {
+        let rfcrcrc = document.createElement("div");
+        rfcrcrc.classList.add("sub-sub-requirements");
+        let rfcrcrComponent = document.createElement("p");
+        rfcrcrComponent.innerText = `${requiredComponent.name} requires ${
+          requiredComponent.amount * rc.amount
+        } ${rc.name}`;
+        rfcrcrComponent.classList.add("sub-sub-component");
+        rfcrcrc.appendChild(rfcrcrComponent);
+        featureDiv.appendChild(rfcrcrc);
+
+        /*Required-Feature-Component's required component's required components, required component */
+        try {
+          MyComponents[rc.name].requirements.forEach((rc2) => {
+            let rfcrcrc2 = document.createElement("div");
+            rfcrcrc2.classList.add("sub-sub-sub-requirements");
+            let rfcrcrComponent2 = document.createElement("p");
+            rfcrcrComponent.innerText = `${rc.name} requires ${
+              rc.amount * rc2.amount
+            } ${rc2.name}`;
+            rfcrcrComponent2.classList.add("sub-sub-sub-component");
+            rfcrcrc2.appendChild(rfcrcrComponent2);
+            featureDiv.appendChild(rfcrcrc2);
+            console.log(`${rc.name} requires ${rc2.name}`);
+          });
+        } catch (error) {
+          console.log(error);
+          console.log(`${MyComponents[rc.name].name} was faulty`);
+        }
+      });
     });
   });
 

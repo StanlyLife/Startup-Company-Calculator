@@ -63,9 +63,57 @@
       "amount": 2
     }
   ],
+  "Offline_Content": [
+    {
+      "name": "Backend_Module",
+      "amount": 2
+    },
+    {
+      "name": "Frontend_Module",
+      "amount": 1
+    },
+    {
+      "name": "Storage_Module",
+      "amount": 2
+    },
+    {
+      "name": "Database_Layer",
+      "amount": 2
+    },
+    {
+      "name": "UI_Set",
+      "amount": 1
+    }
+  ],
+  "Chat_System": [
+    {
+      "name": "Database_Layer",
+      "amount": 1
+    },
+    {
+      "name": "Input_Module",
+      "amount": 1
+    },
+    {
+      "name": "Notification_Module",
+      "amount": 2
+    },
+    {
+      "name": "Network_Component",
+      "amount": 3
+    },
+    {
+      "name": "API_Client_Module",
+      "amount": 2
+    },
+    {
+      "name": "Design_Guidelines",
+      "amount": 1
+    }
+  ],
   "layout": [
     {
-      "name": "UI_Component",
+      "name": "UI_Module",
       "amount": 1
     }
   ]

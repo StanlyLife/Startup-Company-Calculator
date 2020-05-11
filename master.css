@@ -23,7 +23,7 @@ main h1 {
 .feature {
   color: snow;
   background-color: indianred;
-  width: 50%;
+  width: 75%;
   margin: 5vh auto;
   padding: 3rem;
   border-radius: 3rem;
@@ -55,4 +55,12 @@ main h1 {
 .components-required-component {
   font-size: 1.25rem;
   color: #333;
+}
+
+.sub-sub-requirements {
+  background-color: lawngreen;
+  color: #333;
+  padding: 1rem;
+  border-radius: 3rem;
+  margin: 1rem;
 }
