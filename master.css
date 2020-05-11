@@ -3,7 +3,10 @@
   padding: 0;
   box-sizing: 0;
 }
-
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: wheat;
+}
 body {
   background: linear-gradient(
     120deg,
