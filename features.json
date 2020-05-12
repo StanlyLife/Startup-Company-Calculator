@@ -216,5 +216,15 @@
       "name": "API_Client_Module",
       "amount": 2
     }
+  ],
+  "Comment_Functionality": [
+    {
+      "name": "Backend_Module",
+      "amount": 3
+    },
+    {
+      "name": "Input_Module",
+      "amount": 3
+    }
   ]
 }
