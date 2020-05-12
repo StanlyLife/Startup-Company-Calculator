@@ -188,7 +188,7 @@
       { "name": "Backend_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4,
+    "time": 6,
     "url": "./assets/modules/input.png"
   },
   "Storage_Module": {
@@ -198,7 +198,7 @@
       { "name": "Backend_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4,
+    "time": 8,
     "url": "./assets/modules/storage.png"
   },
   "Content_Management_Module": {
@@ -209,7 +209,7 @@
       { "name": "Input_Module", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4,
+    "time": 37,
     "url": "./assets/modules/contentmanagement.png"
   },
   "Video_Playback_Module": {
@@ -220,7 +220,7 @@
       { "name": "Frontend_Module", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4,
+    "time": 45,
     "url": "./assets/modules/video.png"
   },
   "SEO_Module": {
@@ -230,7 +230,7 @@
       { "name": "Network_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4,
+    "time": 24,
     "url": "./assets/modules/seo.png"
   },
   "Authentication_Module": {
@@ -241,7 +241,7 @@
       { "name": "Encryption_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4,
+    "time": 22,
     "url": "./assets/modules/Authentication.png"
   },
   "Email_Module": {
@@ -251,7 +251,7 @@
       { "name": "Backend_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4,
+    "time": 12,
     "url": "./assets/modules/Email.png"
   },
   "Database_Layer": {
@@ -262,7 +262,7 @@
       { "name": "Network_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4,
+    "time": 14,
     "url": "./assets/modules/datalayer.png"
   },
   "Notification_Module": {
@@ -273,7 +273,7 @@
       { "name": "Backend_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4,
+    "time": 18,
     "url": "./assets/modules/notification.png"
   },
   "Payment_Gateway_Module": {
@@ -284,7 +284,7 @@
       { "name": "Database_Layer", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4,
+    "time": 76,
     "url": "./assets/modules/payment.png"
   },
   "Localization_Module": {
@@ -294,7 +294,7 @@
       { "name": "Frontend_Module", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4,
+    "time": 25,
     "url": "./assets/modules/localization.png"
   },
   "Search_Module": {
@@ -305,7 +305,7 @@
       { "name": "Search_Algorithm_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4,
+    "time": 20,
     "url": "./assets/modules/search.png"
   },
   "Bandwidth_Comporession_Module": {
@@ -316,7 +316,7 @@
       { "name": "Network_Component", "amount": 1 }
     ],
     "role": "Lead_Developer",
-    "time": 4,
+    "time": 18,
     "url": "./assets/modules/compression.png"
   },
   "API_Client_Module": {
@@ -327,7 +327,7 @@
       { "name": "Compression_Component", "amount": 2 }
     ],
     "role": "Lead_Developer",
-    "time": 4,
+    "time": 40,
     "url": "./assets/modules/apiclient.png"
   },
   "Code_Optimization_Module": {
@@ -338,7 +338,7 @@
       { "name": "Frontend_Module", "amount": 2 }
     ],
     "role": "Lead_Developer",
-    "time": 4,
+    "time": 90,
     "url": "./assets/modules/codeoptimization.png"
   },
   "Research_Point": {

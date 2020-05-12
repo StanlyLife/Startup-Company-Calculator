@@ -134,6 +134,7 @@ tr {
 
 th {
   background: #4caf5c;
+  border-bottom: 7px solid #2e7c3b;
   padding: 0.5rem;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
@@ -178,4 +179,13 @@ th {
   background-color: #333;
   color: #4caf5c;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.time {
+  border-bottom: 3px solid #4caf5c;
+  border-top: 3px solid #2e7c3b;
+  padding: 0.25rem;
+  text-align: center;
+  background: #333;
+  border-radius: 50px 0px;
 }

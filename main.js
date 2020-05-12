@@ -136,6 +136,33 @@ function CreateFeatureHtml(name) {
   document.querySelector("main").appendChild(featureContainer);
 }
 
+function AddTimeToProductionTable(component, amount) {
+  let timeId;
+  switch (String(component.role)) {
+    case "developer":
+      timeId = "developer-time";
+      break;
+    case "designer":
+      timeId = "designer-time";
+      break;
+    case "Lead_Developer":
+      timeId = "Lead-Developer-time";
+      break;
+    case "Sysadmin":
+      timeId = "Sysadmin-time";
+      break;
+    case "other":
+      timeId = "other-time";
+      break;
+    default:
+      console.log(`error for : ${component.role}`);
+      break;
+  }
+
+  const timer = document.querySelector(`.${timeId}`);
+  timer.innerText = parseInt(timer.innerText) + component.time * amount;
+}
+
 function AddComponentToProductionTable(component, amount) {
   let td = document.querySelector(`.${component.role}`);
 
@@ -162,7 +189,9 @@ function AddComponentToProductionTable(component, amount) {
 
     /* add tool tip */
     tippy(`.${component.name}`, {
-      content: String(component.name).replace(/_/g, " "),
+      content: `${String(component.name).replace(/_/g, " ")} : ${
+        component.time
+      } Hours`,
       duration: 500,
       trigger: "click",
       theme: "tooltip",
@@ -172,7 +201,7 @@ function AddComponentToProductionTable(component, amount) {
     ProductionComponent.innerText =
       parseInt(ProductionComponent.innerText) + amount;
   }
-  /* add event listener */
+  AddTimeToProductionTable(component, amount);
 }
 
 GetComponents();
