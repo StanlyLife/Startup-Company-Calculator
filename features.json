@@ -226,5 +226,41 @@
       "name": "Input_Module",
       "amount": 3
     }
+  ],
+  "Item_Listing": [
+    {
+      "name": "Backend_Module",
+      "amount": 1
+    },
+    {
+      "name": "Content_Management_Module",
+      "amount": 1
+    },
+    {
+      "name": "Frontend_Module",
+      "amount": 1
+    }
+  ],
+  "Profile_page": [
+    {
+      "name": "Input_Module",
+      "amount": 4
+    },
+    {
+      "name": "Frontend_Module",
+      "amount": 3
+    },
+    {
+      "name": "UI_Set",
+      "amount": 2
+    },
+    {
+      "name": "Backend_Module",
+      "amount": 3
+    },
+    {
+      "name": "Authentication_Module",
+      "amount": 1
+    }
   ]
 }
