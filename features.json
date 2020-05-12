@@ -262,5 +262,27 @@
       "name": "Authentication_Module",
       "amount": 1
     }
+  ],
+  "Image_Upload": [
+    {
+      "name": "Input_Module",
+      "amount": 1
+    },
+    {
+      "name": "Frontend_Module",
+      "amount": 1
+    },
+    {
+      "name": "Storage_Module",
+      "amount": 2
+    },
+    {
+      "name": "Database_Layer",
+      "amount": 2
+    },
+    {
+      "name": "UI_Set",
+      "amount": 1
+    }
   ]
 }
