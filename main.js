@@ -1,21 +1,16 @@
 let MyComponents;
 let MyFeatures;
 let featureSelect = document.querySelector("#functioanlities");
+let featureBtn = document.querySelector("#add-feature-btn");
+
 async function getFeatures() {
   await fetch("features.json")
     .then((x) => x.json())
     .then((requirements) => {
       MyFeatures = requirements;
-      // CreateFeatureRequirements(requirements.Sharing_Functionality, "Sf");
-      // CreateFeatureRequirements(requirements.Chat_System, "Chat System");
-      // CreateFeatureRequirements(requirements.Live_Streaming, "Live Streaming");
-      CreateFeatureRequirements(
-        requirements.Video_Functionality,
-        "Video Functionality"
-      );
-      CreateFeatureRequirements(requirements.Landing_Page, "Landing page");
-      CreateFeatureRequirements(requirements.Help_System, "Help system");
-      CreateFeatureRequirements(requirements.AD_Block_Obfuscator, "Adblocker");
+      // CreateFeatureRequirements(requirements.Landing_Page, "Landing page");
+      // CreateFeatureRequirements(requirements.Help_System, "Help system");
+      // CreateFeatureRequirements(requirements.AD_Block_Obfuscator, "Adblocker");
       createSelectorOptions();
     });
 }
@@ -25,8 +20,23 @@ async function GetComponents() {
     .then((x) => x.json())
     .then((components) => {
       MyComponents = components;
+      return components;
     });
 }
+
+/* Event listeners */
+// function SelectedFeature() {
+//   console.log(featureSelect.innerText);
+//   // CreateFeatureRequirements(,featureSelect.value);
+// }
+
+featureBtn.addEventListener("click", (x) => {
+  console.log(featureSelect.value);
+  CreateFeatureRequirements(
+    MyFeatures[featureSelect.value],
+    featureSelect.value
+  );
+});
 
 /* Create options for select dropdown */
 function createSelectorOptions() {
