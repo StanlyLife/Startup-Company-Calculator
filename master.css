@@ -16,11 +16,14 @@ body {
 }
 
 main h1 {
-  color: #555;
+  color: #4caf5c;
   text-transform: uppercase;
-  font: Arial;
+  font-family: Arial;
+  font-size: 2.5rem;
   margin: 0 auto;
   text-align: center;
+
+  text-shadow: 1px 1px 2px #333;
 }
 
 .feature {
@@ -36,8 +39,10 @@ main h1 {
   justify-content: center;
   align-items: center;
 
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   text-align: center;
+
+  border-bottom: 15px solid rgba(51, 51, 51, 0.452);
 }
 
 .feature h1 {
@@ -116,7 +121,7 @@ main h1 {
 table {
   width: 75vw;
   margin: 2vh auto;
-  background: #777;
+  background: rgb(114, 114, 114);
   border-radius: 15px 15px 0 0;
   border-bottom: 1rem solid indianred;
   box-shadow: 0px 5px 7px -1px rgba(0, 0, 0, 0.25);
@@ -176,6 +181,11 @@ th {
 }
 
 .tippy-box[data-theme~="tooltip"] {
+  background-color: #333;
+  color: indianred;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.tippy-box[data-theme~="time-tooltip"] {
   background-color: #333;
   color: #4caf5c;
   font-family: Arial, Helvetica, sans-serif;

@@ -203,6 +203,11 @@ function AddComponentToProductionTable(component, amount) {
   }
   AddTimeToProductionTable(component, amount);
 }
+/* tooltips */
+tippy(".time", {
+  content: `Time to produce`,
+  theme: "time-tooltip",
+});
 
 GetComponents();
 getFeatures();
