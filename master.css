@@ -106,6 +106,76 @@ main h1 {
   justify-content: center;
   width: 25vw;
   margin: 0 auto;
-  height: 2.5vh;
+  height: 4vh;
+  text-align: center;
   margin-top: 2.5rem;
+}
+
+/*table*/
+
+table {
+  width: 75vw;
+  margin: 2vh auto;
+  background: #777;
+  border-radius: 15px 15px 0 0;
+  border-bottom: 1rem solid indianred;
+  box-shadow: 0px 5px 7px -1px rgba(0, 0, 0, 0.25);
+}
+
+td,
+th {
+  flex: 1;
+  margin: 1rem;
+}
+
+tr {
+  display: flex;
+}
+
+th {
+  background: #4caf5c;
+  padding: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.table-component {
+  display: flex;
+  flex-direction: row;
+  padding: 0.75rem;
+  border-radius: 25px;
+  justify-content: space-evenly;
+  margin: 0.5rem 0.1rem;
+  background: #333;
+  border-bottom: 3px solid indianred;
+}
+
+.table-component:hover {
+  background: #555;
+}
+
+.table-component img {
+  flex: 2;
+  max-width: 25%;
+  max-height: 25%;
+  pointer-events: none;
+}
+
+.table-component p {
+  pointer-events: none;
+  flex: 1;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tippy-box[data-theme~="tooltip"] {
+  background-color: #333;
+  color: #4caf5c;
+  font-family: Arial, Helvetica, sans-serif;
 }

@@ -344,64 +344,64 @@
   "Research_Point": {
     "name": "Research_Point",
     "requirements": [],
-    "role": "Researcher",
+    "role": "other",
     "time": 1,
-    "url": "./assets/components/researchpoint.png"
+    "url": "./assets/components/ResearchPoint.png"
   },
-  "Viritual_Hardware": {
-    "name": "Viritual_Hardware",
+  "Virtual_Hardware": {
+    "name": "Virtual_Hardware",
     "requirements": [],
     "role": "Sysadmin",
     "time": 4,
-    "url": "./assets/components/researchpoint.png"
+    "url": "./assets/components/hardware.png"
   },
   "Operating_System": {
     "name": "Operating_System",
     "requirements": [],
     "role": "Sysadmin",
     "time": 4,
-    "url": "./assets/components/researchpoint.png"
+    "url": "./assets/components/operatingsystem.png"
   },
   "Firewall": {
     "name": "Firewall",
     "requirements": [],
     "role": "Sysadmin",
     "time": 4,
-    "url": "./assets/components/researchpoint.png"
+    "url": "./assets/components/firewall.png"
   },
   "Process_Management": {
     "name": "Process_Management",
     "requirements": [],
     "role": "Sysadmin",
     "time": 6,
-    "url": "./assets/components/researchpoint.png"
+    "url": "./assets/components/processmanagement.png"
   },
   "Continous_Integration": {
     "name": "Continous_Integration",
     "requirements": [],
     "role": "Sysadmin",
     "time": 8,
-    "url": "./assets/components/researchpoint.png"
+    "url": "./assets/components/continuousintegration.png"
   },
   "Cron_Job": {
     "name": "Cron_Job",
     "requirements": [],
     "role": "Sysadmin",
     "time": 3,
-    "url": "./assets/components/researchpoint.png"
+    "url": "./assets/components/cronjob.png"
   },
   "Virtual_Container": {
     "name": "Virtual_Container",
     "requirements": [
       { "name": "Virtual_Hardware", "amount": 1 },
       { "name": "Operating_System", "amount": 1 },
-      { "name": "Continous_Inegration", "amount": 1 },
+      { "name": "Continous_Integration", "amount": 1 },
       { "name": "Cron_Job", "amount": 1 },
       { "name": "Process_Management", "amount": 1 }
     ],
     "role": "Sysadmin",
     "time": 25,
-    "url": "./assets/components/researchpoint.png"
+    "url": "./assets/modules/VirtualContainer.png"
   },
   "Cluster": {
     "name": "Cluster",
@@ -411,7 +411,7 @@
     ],
     "role": "Sysadmin",
     "time": 115,
-    "url": "./assets/components/researchpoint.png"
+    "url": "./assets/modules/Cluster.png"
   },
   "Swarm_Management": {
     "name": "Swarm_Management",
@@ -421,6 +421,6 @@
     ],
     "role": "Sysadmin",
     "time": 140,
-    "url": "./assets/components/researchpoint.png"
+    "url": "./assets/modules/SwarmManagement.png"
   }
 }

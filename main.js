@@ -1,8 +1,7 @@
 let MyComponents;
 let MyFeatures;
-let featureSelect = document.querySelector("#functioanlities");
-let featureBtn = document.querySelector("#add-feature-btn");
-
+const featureSelect = document.querySelector("#functioanlities");
+const featureBtn = document.querySelector("#add-feature-btn");
 async function getFeatures() {
   await fetch("features.json")
     .then((x) => x.json())
@@ -25,11 +24,6 @@ async function GetComponents() {
 }
 
 /* Event listeners */
-// function SelectedFeature() {
-//   console.log(featureSelect.innerText);
-//   // CreateFeatureRequirements(,featureSelect.value);
-// }
-
 featureBtn.addEventListener("click", (x) => {
   console.log(featureSelect.value);
   CreateFeatureRequirements(
@@ -108,7 +102,7 @@ function CreateFeatureHtml(name) {
   featureContainer.classList.add("feature");
 
   featureHeader = document.createElement("h1");
-  featureHeader.innerText = name;
+  featureHeader.innerText = String(name).replace(/_/g, " ");
   featureContainer.appendChild(featureHeader);
 
   const componentContainer = document.createElement("div");
@@ -124,6 +118,7 @@ function CreateFeatureHtml(name) {
       componentWrapper.appendChild(componentImage);
     }
     propValue = counts[propName];
+    AddComponentToProductionTable(MyComponents[propName], parseInt(propValue));
     let component = document.createElement("p");
     let componentAmount = document.createElement("p");
     componentAmount.classList.add("amount");
@@ -139,6 +134,45 @@ function CreateFeatureHtml(name) {
 
   featureContainer.appendChild(componentContainer);
   document.querySelector("main").appendChild(featureContainer);
+}
+
+function AddComponentToProductionTable(component, amount) {
+  let td = document.querySelector(`.${component.role}`);
+
+  let ProductionComponent = document.getElementById(`${component.name}`);
+  if (ProductionComponent === null) {
+    /* create component container */
+    let NewProductionComponent = document.createElement("div");
+    NewProductionComponent.classList.add("table-component");
+    NewProductionComponent.classList.add(`${component.name}`);
+    NewProductionComponent.value = String(component.name).replace(/_/g, " ");
+
+    /* image */
+    let componentImage = document.createElement("img");
+    componentImage.src = `${component.url}`;
+    NewProductionComponent.appendChild(componentImage);
+    /* amount */
+    let componentAmount = document.createElement("p");
+    componentAmount.innerText = amount;
+    componentAmount.id = component.name;
+    NewProductionComponent.appendChild(componentAmount);
+
+    /* append to table */
+    td.appendChild(NewProductionComponent);
+
+    /* add tool tip */
+    tippy(`.${component.name}`, {
+      content: String(component.name).replace(/_/g, " "),
+      duration: 500,
+      trigger: "click",
+      theme: "tooltip",
+    });
+  } else {
+    /* append amount */
+    ProductionComponent.innerText =
+      parseInt(ProductionComponent.innerText) + amount;
+  }
+  /* add event listener */
 }
 
 GetComponents();
