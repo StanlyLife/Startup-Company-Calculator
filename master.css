@@ -71,3 +71,41 @@ main h1 {
 .component-wrapper img {
   width: 10%;
 }
+
+/*features*/
+
+#add-feature-btn {
+  border: none;
+  background: white;
+  color: transparent;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+#add-feature-btn:hover {
+  background: #333;
+}
+
+#add-feature-btn:hover i {
+  color: white;
+}
+
+#add-feature-btn i {
+  transition: all 0.3s ease;
+  color: #333;
+  padding: 1px;
+}
+
+#functioanlities {
+  border: none;
+  flex: 2;
+}
+
+#features {
+  display: flex;
+  justify-content: center;
+  width: 25vw;
+  margin: 0 auto;
+  height: 2.5vh;
+  margin-top: 2.5rem;
+}
