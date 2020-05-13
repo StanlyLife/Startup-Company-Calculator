@@ -199,3 +199,33 @@ th {
   background: #333;
   border-radius: 50px 0px;
 }
+
+/*features counter*/
+
+.added-features-wrapper {
+  width: 75vw;
+
+  margin: 0 auto;
+  margin-top: 2.5vh;
+}
+
+#added-features {
+  background: #333;
+  display: inline-block;
+  padding: 0.25rem 2rem;
+  border-left: 5px solid #4caf5c;
+  margin: 0.15rem;
+}
+
+#added-features p {
+  text-transform: capitalize;
+  font-weight: 550;
+  display: inline-block;
+  margin: auto;
+  color: #999;
+}
+
+#added-features .amount {
+  padding-left: 5px;
+  color: #4caf5c;
+}
