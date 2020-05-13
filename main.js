@@ -107,6 +107,9 @@ function CreateFeatureHtml(name) {
 
   const componentContainer = document.createElement("div");
 
+  /* add feature to counter */
+  AddFeatureCounter(name);
+
   var propValue;
   for (var propName in counts) {
     let componentWrapper = document.createElement("div");
@@ -203,6 +206,37 @@ function AddComponentToProductionTable(component, amount) {
   }
   AddTimeToProductionTable(component, amount);
 }
+const addedFeaturesCounter = document.querySelector("#added-features");
+const addedFeaturesWrapper = document.querySelector(".added-features-wrapper");
+
+function AddFeatureCounter(featureName) {
+  let featureBlock = document.querySelector(`.${featureName}`);
+  if (featureBlock === null || featureBlock === undefined) {
+    /* create div */
+    featureBlock = document.createElement("div");
+    featureBlock.classList.add(featureName);
+    featureBlock.id = "added-features";
+    /* create name */
+    const featureBlockName = document.createElement("p");
+    featureBlockName.classList.add("name");
+    featureBlockName.innerText = String(featureName).replace(/_/g, " ");
+
+    /* feature amount */
+    const featureBlockAmount = document.createElement("p");
+    featureBlockAmount.classList.add("amount");
+    featureBlockAmount.innerText = 1;
+
+    /*append children */
+    featureBlock.appendChild(featureBlockName);
+    featureBlock.appendChild(featureBlockAmount);
+    /* append to wrapper */
+    addedFeaturesWrapper.appendChild(featureBlock);
+  } else {
+    let amount = featureBlock.querySelector(".amount");
+    amount.innerText = parseInt(amount.innerText) + 1;
+  }
+}
+
 /* tooltips */
 tippy(".time", {
   content: `Time to produce`,
