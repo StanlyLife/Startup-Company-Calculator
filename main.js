@@ -2,14 +2,15 @@ let MyComponents;
 let MyFeatures;
 const featureSelect = document.querySelector("#functioanlities");
 const featureBtn = document.querySelector("#add-feature-btn");
+const addedFeaturesCounter = document.querySelector("#added-features");
+const addedFeaturesWrapper = document.querySelector(".added-features-wrapper");
+
+/* fetch json */
 async function getFeatures() {
   await fetch("features.json")
     .then((x) => x.json())
     .then((requirements) => {
       MyFeatures = requirements;
-      // CreateFeatureRequirements(requirements.Landing_Page, "Landing page");
-      // CreateFeatureRequirements(requirements.Help_System, "Help system");
-      // CreateFeatureRequirements(requirements.AD_Block_Obfuscator, "Adblocker");
       createSelectorOptions();
     });
 }
@@ -46,8 +47,7 @@ function createSelectorOptions() {
 }
 
 let requirementsList = [];
-let requirementsAmount = [];
-
+/* Recursive method to get the sub(*n)requirements */
 function ComponentRequirements(_component, amount) {
   /* parse from feature.component to components.component */
   component = MyComponents[_component.name];
@@ -70,25 +70,22 @@ function ComponentRequirements(_component, amount) {
     });
   }
 }
-
+/* check if component has requirements */
 function ComponentHasRequirements(requirements) {
   if (requirements.length > 0) {
     return true;
   }
   return false;
 }
+/* create an object of requirements for the feature */
 let counts = {};
 function CreateFeatureRequirements(feature, name) {
   requirementsList = [];
   feature.forEach((Requirements) => {
     for (let i = 0; i < Requirements.amount; i++) {
-      // requirementsList.push(Requirements.name);
       ComponentRequirements(MyComponents[Requirements.name], 1);
     }
     requirementsList.sort();
-
-    /* */
-    /* */
   });
   counts = {};
   requirementsList.forEach(function (x) {
@@ -97,6 +94,7 @@ function CreateFeatureRequirements(feature, name) {
   CreateFeatureHtml(name);
 }
 
+/* create feature html division */
 function CreateFeatureHtml(name) {
   const featureContainer = document.createElement("div");
   featureContainer.classList.add("feature");
@@ -206,9 +204,8 @@ function AddComponentToProductionTable(component, amount) {
   }
   AddTimeToProductionTable(component, amount);
 }
-const addedFeaturesCounter = document.querySelector("#added-features");
-const addedFeaturesWrapper = document.querySelector(".added-features-wrapper");
 
+/* this is the top level div with feature- name & amount */
 function AddFeatureCounter(featureName) {
   let featureBlock = document.querySelector(`.${featureName}`);
   if (featureBlock === null || featureBlock === undefined) {
